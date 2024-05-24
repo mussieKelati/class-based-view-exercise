@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <ul>
+        <li>
+            <a href="{% url 'classroom:thankyou' %}">Thank you link</a>
+        </li>
+        <li>
+            <a href="{% url 'classroom:contact' %}">Contact View Page</a>
+
+        </li>
+    <li>
+            <a href="{% url 'classroom:create_teacher' %}">teacherView Page</a>
+            
+        </li>
+        <li>
+            <a href="{% url 'classroom:teacher_list' %}">teacher list View Page</a>
+            
+        </li>
+    </ul>
+</body>
+</html>
