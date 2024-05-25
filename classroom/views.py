@@ -26,8 +26,8 @@ class TeacherListView(ListView):
     model =Teacher
     template_name = "teacher_list.html"
     queryset = Teacher.objects.order_by('first_name')
+    context_object_name = "teacher_list"
 
 class TeacherDetailView(DetailView):
-    model = Teacher
-   
-   
+    model = Teacher 
+    context_object_name = 'teacher'

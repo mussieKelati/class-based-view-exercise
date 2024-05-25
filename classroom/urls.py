@@ -9,7 +9,9 @@ urlpatterns = [
     path('contact/', ContactFormViews.as_view(), name='contact'),
      path('create_teacher/', TeacherCreateView.as_view(), name='create_teacher'),
     path('teacher_list', TeacherListView.as_view(), name='teacher_list'),
-    # path('teacher_detail/<int:id>/',TeacherDetailView.as_view, name='teacher_detail'),
+   path('teacher_detail/<int:pk>/', TeacherDetailView.as_view(), name='teacher_detail'),
+   
+
   
 ]
     
