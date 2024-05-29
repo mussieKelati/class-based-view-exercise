@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, FormView,ListView,CreateView,DetailView
+from django.views.generic import TemplateView, FormView,ListView,CreateView,DetailView,UpdateView,DeleteView
 from .forms import ContactForm
 from django.urls import reverse_lazy
 from .models import Teacher
@@ -31,3 +31,15 @@ class TeacherListView(ListView):
 class TeacherDetailView(DetailView):
     model = Teacher 
     context_object_name = 'teacher'
+
+class TeacherUpdateView(UpdateView):
+    model = Teacher
+    fields = "__all__"
+    success_url = reverse_lazy('classroom:teacher_list') 
+
+class TeacherDeleteView(DeleteView):
+    model = Teacher
+    
+    success_url  = reverse_lazy('classroom:teacher_list')
+
+
